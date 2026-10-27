@@ -1,34 +1,44 @@
 # Sandbox Kit
 
-### One SDK. Any sandbox provider.
+An organization committed to building open-source tools for cloud sandboxes.
 
-Sandbox Kit is an open-source, multi-language SDK for creating and managing sandboxes across infrastructure providers.
+Sandbox Kit publishes libraries, shared contracts, and provider integrations for creating and managing cloud sandboxes from TypeScript and Go.
 
-Build against a consistent interface without coupling your application to one provider.
+## Libraries
 
-## Why Sandbox Kit?
+TypeScript packages are on npm.
 
-Sandbox providers differ in their APIs, configuration, lifecycle operations, and language support. Sandbox Kit offers shared contracts and consistent semantics while keeping provider-specific capabilities explicit.
+| Package | Install |
+| --- | --- |
+| [`@sandbox-kit/sandbox`](https://www.npmjs.com/package/@sandbox-kit/sandbox) | `npm install @sandbox-kit/sandbox` |
+| [`@sandbox-kit/daytona`](https://www.npmjs.com/package/@sandbox-kit/daytona) | `npm install @sandbox-kit/daytona` |
+| [`@sandbox-kit/modal`](https://www.npmjs.com/package/@sandbox-kit/modal) | `npm install @sandbox-kit/modal` |
 
-- **Provider-agnostic:** Integrate with multiple providers through a common SDK interface.
-- **Multi-language:** Shared contracts across Go and TypeScript.
-- **Unified lifecycle:** Create, retrieve, and manage sandboxes through supported operations.
-- **Provider-aware:** Validate options and surface capability differences rather than silently ignoring them.
-- **Open source:** MIT-licensed and built in the open.
+Install the core package and the provider you use.
 
-## Current support
+Go modules are in [sandbox-kit/kit](https://github.com/sandbox-kit/kit):
+
+```sh
+go get github.com/sandbox-kit/kit/sdks/go/sandbox@latest
+go get github.com/sandbox-kit/kit/sdks/go/providers/daytona@latest
+# or: go get github.com/sandbox-kit/kit/sdks/go/providers/modal@latest
+```
+
+## Also in the kit repo
+
+- Shared protobuf contracts for create, config, lifecycle, and errors
+- Daytona and Modal provider packages for TypeScript and Go
+- The `sandbox-kit` CLI for tests and contract generation
+- Runnable examples and guides
 
 | | |
 | --- | --- |
 | **Providers** | Daytona, Modal |
-| **Languages** | Go, TypeScript |
-| **Features** | Authentication, sandbox creation, supported lifecycle operations, validation, metadata, common error kinds |
+| **Languages** | TypeScript, Go |
 | **License** | MIT |
 
-Execution, storage, GPU requests, and harness integrations are planned, not yet implemented.
+## Start here
 
-## Get started
+Source, examples, and docs: **[sandbox-kit/kit](https://github.com/sandbox-kit/kit)**.
 
-Explore **[sandbox-kit/kit](https://github.com/sandbox-kit/kit)** for examples, documentation, and contribution instructions.
-
-We welcome feedback, issues, and contributions as we expand provider and language support.
+Issues and pull requests are welcome.
