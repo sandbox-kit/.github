@@ -1,59 +1,82 @@
 # Sandbox Kit
 
-We build open-source tools for **agent sandboxes**: a pluggable SDK for cloud runtimes and provider integrations, and **[sandbox.directory](https://sandbox.directory)**—a searchable list of sandbox products for AI agents.
+Open-source tools for **agent sandboxes**: discover vendors in public, then wire one provider—or switch later—in your app with a shared SDK.
 
-## [sandbox.directory](https://sandbox.directory)
+## What we ship
 
-Curated directory of agent sandbox providers (hosted runtimes, browsers, VMs, self-hosted options). Open the site, search, and jump to each vendor—no account required.
+| | **[sandbox.directory](https://sandbox.directory)** | **[Sandbox Kit](https://github.com/sandbox-kit/kit)** |
+| --- | --- | --- |
+| **Purpose** | Find and compare sandbox providers | Create and manage sandboxes in code |
+| **Audience** | Builders evaluating runtimes | Agents and platforms integrating sandboxes |
+| **Languages** | Web app (no install) | TypeScript, Go |
+| **License** | MIT | MIT |
 
-|             |                                                                   |
-| ----------- | ----------------------------------------------------------------- |
-| **Site**    | [sandbox.directory](https://sandbox.directory)                    |
-| **Source**  | [sandbox-kit/directory](https://github.com/sandbox-kit/directory) |
-| **License** | MIT                                                               |
+---
+
+## sandbox.directory
+
+Searchable directory of agent sandbox products—hosted runtimes, browser sandboxes, VMs, and self-hosted options.
+
+| | |
+| --- | --- |
+| **Site** | [sandbox.directory](https://sandbox.directory) |
+| **Repository** | [sandbox-kit/directory](https://github.com/sandbox-kit/directory) |
+
+**Typical use:** pick or validate a vendor before you integrate. Search by product name or keyword; open vendor links from the list. No account required.
+
+[Open the directory](https://sandbox.directory) · [Suggest a provider](https://github.com/sandbox-kit/directory/issues/new)
+
+---
 
 ## Sandbox Kit SDK
 
-The SDK ships libraries, shared contracts, and provider integrations for creating and managing cloud sandboxes from TypeScript and Go.
+Multi-provider SDK with one client surface for create/lifecycle, filesystem, and process APIs. Change vendor by swapping the provider package—not your app logic.
 
-### Libraries
+**Providers:** Blaxel · Daytona · Modal
 
-TypeScript packages are on npm.
+| | |
+| --- | --- |
+| **Repository** | [sandbox-kit/kit](https://github.com/sandbox-kit/kit) |
+| **Documentation** | [sandbox-kit.github.io/kit/docs](https://sandbox-kit.github.io/kit/docs) |
+| **Examples** | [kit/examples](https://github.com/sandbox-kit/kit/tree/main/examples) |
 
-| Package                                                                      | Install                            |
-| ---------------------------------------------------------------------------- | ---------------------------------- |
-| [`@sandbox-kit/sandbox`](https://www.npmjs.com/package/@sandbox-kit/sandbox) | `npm install @sandbox-kit/sandbox` |
-| [`@sandbox-kit/daytona`](https://www.npmjs.com/package/@sandbox-kit/daytona) | `npm install @sandbox-kit/daytona` |
-| [`@sandbox-kit/modal`](https://www.npmjs.com/package/@sandbox-kit/modal)     | `npm install @sandbox-kit/modal`   |
+### Quick install
 
-Install the core package and the provider you use.
+Install the **core** package and **one** provider adapter.
 
-Go modules are in [sandbox-kit/kit](https://github.com/sandbox-kit/kit):
+**TypeScript**
+
+```sh
+npm install @sandbox-kit/sandbox @sandbox-kit/daytona
+# or: @sandbox-kit/blaxel · @sandbox-kit/modal
+```
+
+| npm package | Role |
+| --- | --- |
+| [`@sandbox-kit/sandbox`](https://www.npmjs.com/package/@sandbox-kit/sandbox) | Core `Client` |
+| [`@sandbox-kit/blaxel`](https://www.npmjs.com/package/@sandbox-kit/blaxel) | Blaxel |
+| [`@sandbox-kit/daytona`](https://www.npmjs.com/package/@sandbox-kit/daytona) | Daytona |
+| [`@sandbox-kit/modal`](https://www.npmjs.com/package/@sandbox-kit/modal) | Modal |
+
+**Go** (requires Go 1.26+)
 
 ```sh
 go get github.com/sandbox-kit/kit/sdks/go/sandbox@latest
 go get github.com/sandbox-kit/kit/sdks/go/providers/daytona@latest
-# or: go get github.com/sandbox-kit/kit/sdks/go/providers/modal@latest
+# providers: blaxel · daytona · modal
 ```
 
-### Also in the kit repo
+### What’s in the kit repo
 
-- Shared protobuf contracts for create, config, lifecycle, and errors
-- Daytona and Modal provider packages for TypeScript and Go
-- The `sandbox-kit` CLI for tests and contract generation
-- Runnable examples and guides
+- Shared protobuf contracts (create, config, lifecycle, errors)
+- Provider adapters for TypeScript and Go
+- `sandbox-kit` CLI for tests and contract generation
+- Runnable examples per provider
 
-|               |                |
-| ------------- | -------------- |
-| **Providers** | Daytona, Modal |
-| **Languages** | TypeScript, Go |
-| **License**   | MIT            |
+Full tutorials and API detail live in the **[docs site](https://sandbox-kit.github.io/kit/docs)**—start there after install.
 
-## Start here
+---
 
-| Project                 | Link                                                                                                               |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Provider directory**  | [sandbox.directory](https://sandbox.directory) · [sandbox-kit/directory](https://github.com/sandbox-kit/directory) |
-| **SDK, examples, docs** | [sandbox-kit/kit](https://github.com/sandbox-kit/kit)                                                              |
+## Contribute
 
-Issues and pull requests are welcome.
+Open an issue or pull request on [directory](https://github.com/sandbox-kit/directory) or [kit](https://github.com/sandbox-kit/kit). Contributions are welcome.
