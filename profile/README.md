@@ -6,11 +6,11 @@ We build open-source tools for **agent sandboxes**: a pluggable SDK for cloud ru
 
 Curated directory of agent sandbox providers (hosted runtimes, browsers, VMs, self-hosted options). Open the site, search, and jump to each vendor—no account required.
 
-| | |
-| --- | --- |
-| **Site** | [sandbox.directory](https://sandbox.directory) |
-| **Source** | [sandbox-kit/directory](https://github.com/sandbox-kit/directory) |
-| **License** | MIT |
+|             |                                                                   |
+| ----------- | ----------------------------------------------------------------- |
+| **Site**    | [sandbox.directory](https://sandbox.directory)                    |
+| **Source**  | [sandbox-kit/directory](https://github.com/sandbox-kit/directory) |
+| **License** | MIT                                                               |
 
 ## Sandbox Kit SDK
 
@@ -20,11 +20,11 @@ The SDK ships libraries, shared contracts, and provider integrations for creatin
 
 TypeScript packages are on npm.
 
-| Package | Install |
-| --- | --- |
+| Package                                                                      | Install                            |
+| ---------------------------------------------------------------------------- | ---------------------------------- |
 | [`@sandbox-kit/sandbox`](https://www.npmjs.com/package/@sandbox-kit/sandbox) | `npm install @sandbox-kit/sandbox` |
 | [`@sandbox-kit/daytona`](https://www.npmjs.com/package/@sandbox-kit/daytona) | `npm install @sandbox-kit/daytona` |
-| [`@sandbox-kit/modal`](https://www.npmjs.com/package/@sandbox-kit/modal) | `npm install @sandbox-kit/modal` |
+| [`@sandbox-kit/modal`](https://www.npmjs.com/package/@sandbox-kit/modal)     | `npm install @sandbox-kit/modal`   |
 
 Install the core package and the provider you use.
 
@@ -43,17 +43,17 @@ go get github.com/sandbox-kit/kit/sdks/go/providers/daytona@latest
 - The `sandbox-kit` CLI for tests and contract generation
 - Runnable examples and guides
 
-| | |
-| --- | --- |
+|               |                |
+| ------------- | -------------- |
 | **Providers** | Daytona, Modal |
 | **Languages** | TypeScript, Go |
-| **License** | MIT |
+| **License**   | MIT            |
 
 ## Start here
 
-| Project | Link |
-| --- | --- |
-| **Provider directory** | [sandbox.directory](https://sandbox.directory) · [sandbox-kit/directory](https://github.com/sandbox-kit/directory) |
-| **SDK, examples, docs** | [sandbox-kit/kit](https://github.com/sandbox-kit/kit) |
+| Project                 | Link                                                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Provider directory**  | [sandbox.directory](https://sandbox.directory) · [sandbox-kit/directory](https://github.com/sandbox-kit/directory) |
+| **SDK, examples, docs** | [sandbox-kit/kit](https://github.com/sandbox-kit/kit)                                                              |
 
 Issues and pull requests are welcome.
